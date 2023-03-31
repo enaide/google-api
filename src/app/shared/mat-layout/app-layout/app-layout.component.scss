@@ -1,0 +1,25 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: auto;
+
+  font-family: sans-serif;
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+@media(min-width: 700px){
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    height: 100%;
+  }
+}

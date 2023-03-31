@@ -1,0 +1,31 @@
+<app-simple-view>
+  <app-simple-view-header></app-simple-view-header>
+  <app-simple-view-body class="body">
+    <mat-card>
+      <div class="contact">
+        <form [formGroup]="form">
+          <div class="comp-group">
+            <label for="name" class="comp-label">Name </label>
+            <input type="text" formControlName="name" class="comp-control" name="name">
+          </div>
+          <div class="comp-group">
+            <label for="serialNumber " class="comp-label">Serial Number</label>
+            <input type="text" formControlName="serialNumber" class="comp-control" name="serialNumber">
+          </div>
+          <div class="comp-group">
+            <label for="price" class="comp-label">Price</label>
+            <input type="text" formControlName="price" class="comp-control" name="price">
+          </div>
+          <div class="btn-action full-1-3">
+            <button (click)="submit()">Add product</button>
+              <mat-spinner
+              [class.show]="pending"
+              [diameter]="30"
+              [strokeWidth]="3">
+            </mat-spinner>
+          </div>
+        </form>
+      </div>
+  </mat-card>
+  </app-simple-view-body>
+</app-simple-view>
